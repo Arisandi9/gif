@@ -1,0 +1,279 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'mons';
+    src : url('../font/Montserrat-Regular.otf');
+}
+
+
+
+body {
+    font-family: mons ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/scattered-forcefields.svg') ;
+    position: relative;
+    
+}
+
+
+hr {
+    margin:4em 0;
+    height: 20px;
+    border:none;
+    border-radius: 20px;
+    background-color: crimson;
+}
+
+header {
+    display:grid;
+    place-content:center;
+    /* align-items: center; */
+    height:100vh;
+    gap:3em;
+    text-align: center;
+    /* display: none; */
+    
+}
+
+header h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    width: 0;
+    animation: typing 3s steps(20,end) infinite ;
+    color:crimson;
+}
+
+header .counter {
+    display: grid;
+    place-content: center;
+    background-color: crimson;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color:white;
+    margin:auto;
+
+}
+
+header .atention {
+    font-size: 1.2rem;
+    color:crimson;
+    font-weight: bold;
+    
+    animation: buble 5s infinite;
+}
+
+header .made {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.container {
+    padding-top:2rem;
+    max-width: 600px;
+    width:90%;
+    /* height: 100vh; */
+    margin:0 auto;
+    height:100%;
+    display:none;
+    transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+}
+
+.title-wrapper {
+    display: grid;
+    place-content: center;
+    gap:3rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color:rgba(253, 0, 106, 0.808);
+    text-align: center;
+
+}
+
+.title span, .pesan span {
+    display: block;
+}
+
+.title-img {
+    width: 14rem;
+    height: 14rem;
+    background-color: crimson;
+    border-radius: 50%;
+    margin:auto;
+    overflow: hidden;
+    z-index:3;
+    position:relative;
+}
+
+.title-img-sticker {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    justify-self: center;
+    margin-top: -2em;
+    display: block;
+    margin:0 auto;
+}
+
+
+/* pesan */
+
+
+.message {
+    font-size: 1.8rem;
+    position: relative;
+}
+
+
+
+.mail-message {
+    width: 50%;
+    margin:0 auto;
+    display: block;
+    animation: mail-squase .9s both infinite;
+    animation-delay: .5s;
+    cursor: pointer;
+   
+}
+
+/* message main */
+.message-container {
+    position:fixed;
+    top:0;
+    display: none;
+    z-index: 4;
+  
+}
+.message-wrapper {
+    position: relative;
+    font-family: cursive;
+    text-transform: capitalize;
+}
+
+.message-container img {
+    width: 90%;
+    display: block;
+    margin:auto;
+}
+
+.close {
+    position: absolute;
+    top:4%;
+    right:10%;
+    font-size: 3rem;
+    border: .1em solid black;
+    width: 60px;
+    height: 60px;
+    /* text-align: center; */
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+}
+
+.message-from {
+    position: absolute;
+    top:20%;
+    left:15%;
+    font-size: 1.2rem;
+    overflow:hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(20, end) forwards;
+}
+
+.message-to {
+    position:absolute;
+    top: 25%;
+    left: 15%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    width: 0;
+    animation: typing 2s steps(20,end) forwards ;
+}
+
+.message-text {
+    position: absolute;
+    top:30%;
+    left:15%;
+    width: 65vw;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+/* img */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap:1em;
+}
+
+
+
+.img {
+    border:20px solid rgb(173, 169, 169);;
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* particle */
+
+#particles-js {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    /* background:grey; */
+    height: 30vh;
+}
+
+
+
+@keyframes mail-squase {
+    0%{transform:scale3d(1,1,1)}
+    30%{transform:scale3d(1.25,.75,1)}
+    40%{transform:scale3d(.75,1.25,1)}
+    50%{transform:scale3d(1.15,.85,1)}
+    65%{transform:scale3d(.95,1.05,1)}
+    75%{transform:scale3d(1.05,.95,1)}
+    100%{transform:scale3d(1,1,1)}
+}
+
+@keyframes typing {
+    from {
+        width:0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes buble {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+
